@@ -8,17 +8,19 @@ html {
 
 .main {
   width: 90%;
-  margin: auto;
+  margin: 5% auto;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-card {
   border-radius: 10px;
-  margin: 16px;
   padding: 16px;
 }
 
@@ -90,7 +92,7 @@ img {
   color: hsl(0, 0%, 81%);
 }
 
-.attribution {
+footer {
   padding: 4px 0;
   bottom: 0;
   left: 0;
@@ -101,11 +103,12 @@ img {
 
 @media screen and (width: 375px) {
   .grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .grid-card {
-    grid-column: span 1;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
