@@ -6,63 +6,23 @@ html {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-.main {
-  width: 90%;
-  margin: 5% auto;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1.25rem;
+main {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .grid-card {
+  width: 90%;
+  margin: 5% auto;
   border-radius: 10px;
   padding: 16px;
 }
 
-.grid-card:hover {
-  cursor: pointer;
-  z-index: 2;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-}
-
-.grid-card:nth-child(7n + 1) {
-  grid-column: span 2;
-  grid-row: span 1;
+.first-card {
   background-color: hsl(263, 55%, 52%);
-  background-image: url("/images/bg-pattern-quotation.svg");
+  background-image: url(./images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
-  background-position: 80% 0;
-  color: hsl(0, 0%, 81%);
-}
-
-.grid-card:nth-child(7n + 2) {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-color: hsl(217, 19%, 35%);
-  color: hsl(0, 0%, 81%);
-}
-
-.grid-card:nth-child(7n + 3) {
-  grid-column: span 1;
-  grid-row: span 2;
-  background-color: hsl(0, 0%, 100%);
-}
-
-.grid-card:nth-child(7n + 4) {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-color: hsl(0, 0%, 100%);
-}
-
-.grid-card:nth-child(7n + 5) {
-  grid-column: span 2;
-  grid-row: span 1;
-  background-color: hsl(219, 29%, 14%);
-
-  color: hsl(0, 0%, 81%);
+  background-position: 85% 0%;
 }
 
 .photo {
@@ -90,24 +50,13 @@ html {
   margin: 4px 0 0 0;
 }
 
-.quotation-mark {
-  position: absolute;
-  float: right;
-  z-index: 1;
-}
-
-.text-container {
-  position: relative;
-  z-index: 3;
-}
-
 .main-quote {
   font-size: 24px;
-  background-color: transparent;
+  color: hsl(0, 0%, 81%);
 }
 
 .review {
-  opacity: 0.7;
+  color: hsl(0, 0%, 81%);
 }
 
 footer {
@@ -118,22 +67,4 @@ footer {
   text-align: center;
   position: fixed;
   background-color: hsl(210, 46%, 95%);
-}
-
-@media screen and (width: 375px) {
-  .main {
-    width: 375px;
-  }
-  .grid {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .grid-card {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
 }
