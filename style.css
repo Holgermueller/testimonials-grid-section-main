@@ -2,20 +2,22 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: hsl(210, 46%, 95%);
+  background-color: hsl(213, 44%, 95%);
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 main {
   width: 100vw;
   overflow-x: hidden;
+  display: grid;
 }
 
 .grid-card {
-  width: 90%;
+  width: 75%;
   margin: 5% auto;
   border-radius: 10px;
-  padding: 16px;
+  padding: 26px;
+  box-shadow: 0 10px 10px hsl(214, 40%, 89%);
 }
 
 .first-card {
@@ -23,6 +25,19 @@ main {
   background-image: url(./images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: 85% 0%;
+}
+
+.second-card {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.fourth-card {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.third-card,
+.fifth-card {
+  background-color: hsl(0, 0%, 100%);
 }
 
 .photo {
@@ -42,21 +57,65 @@ main {
 }
 
 .student-name {
+  font-size: 16px;
   margin: 0 0 4px 0;
 }
 
 .verified {
-  opacity: 0.5;
   margin: 4px 0 0 0;
 }
 
 .main-quote {
-  font-size: 24px;
+  font-size: 23px;
+}
+
+.verified,
+.review {
+  font-size: 13px;
+}
+
+.first-card .student-name,
+.second-card .student-name,
+.fourth-card .student-name {
   color: hsl(0, 0%, 81%);
 }
 
-.review {
-  color: hsl(0, 0%, 81%);
+.first-card .verified,
+.second-card .verified,
+.fourth-card .verified {
+  color: hsla(0, 0%, 81%, 0.5);
+}
+
+.first-card .main-quote,
+.second-card .main-quote,
+.fourth-card .main-quote {
+  color: hsl(210, 46%, 95%);
+}
+
+.first-card .review,
+.second-card .review,
+.fourth-card .review {
+  color: hsla(0, 0%, 81%, 0.7);
+}
+
+.third-card .student-name,
+.fifth-card .student-name {
+  color: hsl(217, 19%, 35%);
+}
+
+.third-card .verified,
+.fifth-card .verified {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+
+.third-card .main-quote,
+.fifth-card .main-quote {
+  color: hsl(219, 29%, 14%);
+}
+
+.third-card .review,
+.fifth-card .review {
+  color: hsla(219, 29%, 14%, 0.7);
 }
 
 footer {
@@ -65,6 +124,6 @@ footer {
   left: 0;
   width: 100%;
   text-align: center;
-  position: fixed;
+  position: relative;
   background-color: hsl(210, 46%, 95%);
 }
